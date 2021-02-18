@@ -1,0 +1,72 @@
+\documentclass[a4paper]{article}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage[]{biblatex}
+\addbibresource{bibliography.bib}
+
+\include{preamble.tex}
+
+\title{Example document}
+\date{}
+
+\begin{document}
+\maketitle
+
+\newcommand{\E}{\mathbb{E}}
+
+\section{Text}
+
+Special characters: śćżźąęńł\\
+Inline $x=2$ math
+\begin{equation}
+\E[x]=2
+\label{eq:math}\end{equation}
+and standalone equations with numbering (eq.~\ref{eq:math}).
+
+\begin{itemize}
+  \item bullets
+
+  \begin{itemize}
+      \item with nesting
+  \end{itemize}
+  \item are nice
+  \item fsadklj
+\end{itemize}
+
+And so are references \autocite{ntk_paper}, \autocite{distill_gp}
+
+\section{Figures}
+
+With captions and numbered references (fig.~\ref{fig:figure}), of course.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{figure.png}
+\caption{A plot with three decaying traces.
+Decaying errors are nice
+\label{fig:figure}
+}
+\end{figure}
+
+\section{Theorem environments}
+
+Let's start with something easy:
+
+\begin{thm}[Pythagoras’s Theorem]\label{thm:pythagoras} 
+
+Given a right triangle with hypotenuse $c$, we have
+$$
+  c^2 = a^2 + b^2
+$$
+
+\end{thm}
+
+\begin{lem}[Pumping]\label{lem:pumping} 
+
+If it's good, it can be made better, especially in Computer Science.
+
+\end{lem}
+
+As we see in \cref{thm:pythagoras}, triangles are cool and can be made better with \cref{lem:pumping}.
+
+\printbibliography
+\end{document}
