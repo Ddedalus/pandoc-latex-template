@@ -9,7 +9,7 @@ $clean_ext .=  ' run.xml out.ps bbl synctex.gz';
 
 # directory for junk files
 $aux_dir='latex_junk';
-$out_dir='output';
+$out_dir='latex_output';
 
 #add synctex extensions so they are cleaned
 push @generated_exts, 'synctex', 'synctex.gz';
